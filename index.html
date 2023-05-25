@@ -6,7 +6,7 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js" defer></script>
   </head>
   <body>
     <div class="page">
@@ -17,22 +17,16 @@
           <button type="submit" class="todolist-form_submit">Сохранить</button>
         </form>
 
-        <article class="todolist-item">
-          <span class="todolist-item__text">Задача 1</span>
-          <button class="todolist-item__copy"></button>
-          <button class="todolist-item__del"></button>
-        </article>
-        <article class="todolist-item">
-          <span class="todolist-item__text">Задача 2</span>
-          <button class="todolist-item__copy"></button>
-          <button class="todolist-item__del"></button>
-        </article>
-        <article class="todolist-item">
-          <span class="todolist-item__text">Задача 3</span>
-          <button class="todolist-item__copy"></button>
-          <button class="todolist-item__del"></button>
-        </article>
+        <div class="todolist-items"></div>
       </section>
     </div>
+
+    <template id="todolist-item-template">
+      <article class="todolist-item">
+        <span class="todolist-item__text">Текст задачи</span>
+        <button class="todolist-item__copy"></button>
+        <button class="todolist-item__del"></button>
+      </article>
+    </template>
   </body>
 </html>
